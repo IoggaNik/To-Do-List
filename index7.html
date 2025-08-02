@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style7.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container-tasks">
+            <div class="container-tasks-block-center">
+                <h1>Tasks</h1>
+                <div class="container-add container-input-type-text">
+                    <input type="text" placeholder="New task" maxlength="15">
+                    <button>Add task</button>
+                </div>
+                <h4>Maximum 5 tasks</h4>
+                <div class="container-delete container-input-type-text">
+                    <input type="text" placeholder="Remove task">
+                    <button>Delete task</button>
+                </div>
+                <input class="input-search" name="search" type="search" placeholder="Search">
+                <div class="container-filt-list">
+                    <div class="filt-blocks">
+                        <div class="filt-block">
+                            <label for="az">A-Z</label>
+                            <input type="radio" name="sort-tasks" id="az" checked>
+                        </div>
+                        <div class="filt-block">
+                            <label for="za">Z-A</label>
+                            <input type="radio" name="sort-tasks" id="za">
+                        </div>
+                    </div>
+                    <button class="clear-tasks">Clear tasks</button>
+                </div>
+                <ul></ul>
+            </div>
+        </div>
+        <div class="container-reg">
+            <div class="container-reg-block-center">
+                <h1>Registration</h1>
+                <form method="post">
+                    <input 
+                    type="text" 
+                    name="name" 
+                    placeholder="Name"
+                    required>
+
+                    <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Email"
+                    pattern=".+@.+\..+"
+                    required>
+
+                    <input 
+                    type="password" 
+                    name="password" 
+                    placeholder="Password"
+                    pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$"
+                    title="Не менее 5 символов, буквы и цифры"
+                    required>
+            
+                    <div class="block-radio">
+                        <label for="male">Male</label>
+                        <input 
+                        type="radio" 
+                        name="state" 
+                        id="male"
+                        checked
+                        required>
+                    </div>
+            
+                    <div class="block-radio">
+                        <label for="female">Female</label>
+                        <input 
+                        type="radio" 
+                        name="state" 
+                        id="female"
+                        required>
+                    </div>
+            
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <button class="theme-btn">Change Theme</button>
+    <script src="./script7.js"></script>
+</body>
+</html>
